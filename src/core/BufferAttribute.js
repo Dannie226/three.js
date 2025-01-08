@@ -229,6 +229,8 @@ class BufferAttribute {
 
 	getY( index ) {
 
+		if ( this.itemSize < 2 ) return 0;
+
 		let y = this.array[ index * this.itemSize + 1 ];
 
 		if ( this.normalized ) y = denormalize( y, this.array );
@@ -238,6 +240,8 @@ class BufferAttribute {
 	}
 
 	setY( index, y ) {
+
+		if ( this.itemSize < 2 ) return this;
 
 		if ( this.normalized ) y = normalize( y, this.array );
 
@@ -249,6 +253,8 @@ class BufferAttribute {
 
 	getZ( index ) {
 
+		if ( this.itemSize < 3 ) return 0;
+
 		let z = this.array[ index * this.itemSize + 2 ];
 
 		if ( this.normalized ) z = denormalize( z, this.array );
@@ -258,6 +264,8 @@ class BufferAttribute {
 	}
 
 	setZ( index, z ) {
+
+		if ( this.itemSize < 3 ) return this;
 
 		if ( this.normalized ) z = normalize( z, this.array );
 
@@ -269,6 +277,8 @@ class BufferAttribute {
 
 	getW( index ) {
 
+		if ( this.itemSize < 4 ) return 1;
+
 		let w = this.array[ index * this.itemSize + 3 ];
 
 		if ( this.normalized ) w = denormalize( w, this.array );
@@ -278,6 +288,8 @@ class BufferAttribute {
 	}
 
 	setW( index, w ) {
+
+		if ( this.itemSize < 4) return this;
 
 		if ( this.normalized ) w = normalize( w, this.array );
 
