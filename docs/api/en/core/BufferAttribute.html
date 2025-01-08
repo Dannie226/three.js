@@ -192,13 +192,13 @@
 		<p>Returns the x component of the vector at the given index.</p>
 
 		<h3>[method:Number getY]( [param:Integer index] )</h3>
-		<p>Returns the y component of the vector at the given index.</p>
+		<p>Returns the y component of the vector at the given index. Returns 0 if [page:BufferAttribute.itemSize itemSize] is less than 2.</p>
 
 		<h3>[method:Number getZ]( [param:Integer index] )</h3>
-		<p>Returns the z component of the vector at the given index.</p>
+		<p>Returns the z component of the vector at the given index. Returns 0 if [page:BufferAttribute.itemSize itemSize] is less than 3.</p>
 
 		<h3>[method:Number getW]( [param:Integer index] )</h3>
-		<p>Returns the w component of the vector at the given index.</p>
+		<p>Returns the w component of the vector at the given index. Returns 1 if [page:BufferAttribute.itemSize itemSize] is less than 4.</p>
 
 		<h3>[method:this onUpload]( [param:Function callback] )</h3>
 		<p>
@@ -241,13 +241,13 @@
 		<p>Sets the x component of the vector at the given index.</p>
 
 		<h3>[method:this setY]( [param:Integer index], [param:Float y] )</h3>
-		<p>Sets the y component of the vector at the given index.</p>
+		<p>Sets the y component of the vector at the given index. Does nothing if [page:BufferAttribute.itemSize itemSize] is less than 2.</p>
 
 		<h3>[method:this setZ]( [param:Integer index], [param:Float z] )</h3>
-		<p>Sets the z component of the vector at the given index.</p>
+		<p>Sets the z component of the vector at the given index. Does nothing if [page:BufferAttribute.itemSize itemSize] is less than 3.</p>
 
 		<h3>[method:this setW]( [param:Integer index], [param:Float w] )</h3>
-		<p>Sets the w component of the vector at the given index.</p>
+		<p>Sets the w component of the vector at the given index. Does nothing if [page:BufferAttribute.itemSize itemSize] is less than 4.</p>
 
 		<h3>[method:this setXY]( [param:Integer index], [param:Float x], [param:Float y] )</h3>
 		<p>Sets the x and y components of the vector at the given index.</p>
